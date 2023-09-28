@@ -7,7 +7,7 @@ WORKDIR /app
 # Copiamos package.json e package-lock.json para o diretório /app no ​​contêiner
 COPY package*.json ./
 
-# As dependências são instalado no contêiner
+# As dependências são instaladas no contêiner
 RUN npm install
 
 # O restante do código é copiado para o contêiner
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # O comando necessário para executar o aplicativo é especificado
-CMD [ “node”, “app.js” ]
+CMD ["node", "app.js"]
