@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # O comando necessário para executar o aplicativo é especificado
-CMD ["node", "app.js"]
+ENTRYPOINT  ["node", "app.js"]
