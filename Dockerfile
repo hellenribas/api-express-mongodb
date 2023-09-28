@@ -1,5 +1,5 @@
 # Node serve como ambiente de execução para JavaScript, portanto, o usamos como nossa imagem base.
-FROM node:20
+FROM node:16
 
 # Definimos /app como o diretório de trabalho dentro do contêiner
 WORKDIR /app
