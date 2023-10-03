@@ -3,8 +3,6 @@ FROM node:16
 
 ARG USER_ID=default
 
-USER $USER_ID
-
 # Definimos /app como o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
