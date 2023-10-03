@@ -12,6 +12,7 @@ COPY package*.json ./
 # As dependências são instaladas no contêiner
 RUN npm install
 
+RUN chown -R nodeapp:nodeapp /app/src
 
 # O restante do código é copiado para o contêiner
 COPY . .
