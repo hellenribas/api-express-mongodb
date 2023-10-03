@@ -1,7 +1,11 @@
 # Node serve como ambiente de execução para JavaScript, portanto, o usamos como nossa imagem base.
-FROM node:20
+FROM node:16
 
-USER nodeapp
+ARG USER_ID
+
+
+USER $USER_ID
+
 
 # Definimos /app como o diretório de trabalho dentro do contêiner
 WORKDIR /app/src
@@ -12,7 +16,7 @@ COPY package*.json ./
 # As dependências são instaladas no contêiner
 RUN npm install
 
-RUN chown -R nodeapp:nodeapp /app/src
+RUN chown -R $USER_ID:$USER_ID /app/src
 
 # O restante do código é copiado para o contêiner
 COPY . .
