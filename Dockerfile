@@ -12,7 +12,6 @@ COPY package*.json ./
 # As dependências são instaladas no contêiner
 RUN npm install
 
-RUN chown -R nodeapp:nodeapp /app/src
 
 # O restante do código é copiado para o contêiner
 COPY . .
@@ -22,4 +21,4 @@ COPY . .
 EXPOSE 3000
 
 # O comando necessário para executar o aplicativo é especificado
-ENTRYPOINT  ["npm", "start"]
+CMD ["npm", "start"]
